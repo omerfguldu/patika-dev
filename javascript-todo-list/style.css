@@ -42,7 +42,7 @@ ul li.checked::before {
   border-color: #fff;
   border-style: solid;
   border-width: 0 2px 2px 0;
-  top: 10px;
+  top: 15px;
   left: 16px;
   transform: rotate(45deg);
   height: 15px;
@@ -104,4 +104,22 @@ input {
 
 .button:hover {
   background-color: #bbb;
+}
+
+.btn-remove{
+  border: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: transparent;
+  font-weight: bold;
+  color: gray;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+}
+
+.btn-remove:hover{
+  background-color: rgba(247, 133, 1, .6);
 }
