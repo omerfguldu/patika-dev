@@ -122,4 +122,5 @@ input {
 
 .btn-remove:hover{
   background-color: rgba(247, 133, 1, .6);
+  color: aliceblue;
 }
