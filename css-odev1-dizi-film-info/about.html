@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header id="header">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Anasayfa</a>
+                    </li>
+                    <li>
+                        <a href="details.html">Detaylar</a>
+                    </li>
+                    <li>
+                        <a href="about.html" style="font-weight: 600;">Hakkımızda</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa fa-arrow-up"></i> </button>
+        <section class="about-section">
+            <div class="about-content">
+                <h2>Hakkımızda</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto asperiores odit ipsam quidem repellat incidunt dicta, esse aliquid nulla aperiam inventore laboriosam quas modi maxime? Numquam quod dicta eum veritatis.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, itaque consectetur. Veniam sunt nam iusto voluptatibus exercitationem eos labore quos reprehenderit ex, ea, aut dolor dolorem! Consectetur ducimus ex nesciunt!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati praesentium ab optio voluptatibus neque ratione sit atque accusantium voluptate iusto dolores reprehenderit, illum dolore? Cupiditate et itaque autem similique quos.</p>      
+            </div>            
+            <form action="" class="form">    
+                <h2>İstek ve Görüşleriniz</h2>   
+                <label for="name">Adınız</label>
+                <input type="text" name="name" id="name" placeholder="Adınızı giriniz...">
+                <label for="email">Email Adresiniz</label>
+                <input type="email" name="email" id="email" placeholder="Email adresinizi giriniz...">
+                <label for="textarea">Görüş ve isteklerinizi bildirebilirsiniz.</label>
+                <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="İstek ve görüşlerinizi buraya yazınız..."></textarea>
+                <button class="submit" type="submit">GÖNDER</button>
+            </form>      
+        </section>
+        <footer id="footer">
+            <p>Follow us on</p>
+            <div class="social-links">
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+            <p>&copy; Tüm hakları saklıdır. </p>
+        </footer>
+    </main>
+    <script>
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+    <script src="js/scroll_nav.js"></script>
+</body>
+</html>
