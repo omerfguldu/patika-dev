@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root{ /* değişken tanımlamaları */
+    --font-primary: 'Roboto',sans-serif;
+    --font-clock:'Share Tech Mono', monospace;    
+    --text-white:#fff;
+    --text-faded:rgba(255,255,255,.2);
+    --text-faded-2:rgba(255,255,255,.7);
+    --text-red:#c71c1c;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:var(--font-primary);
+    height: 100vh;
+    background-image: url(/digital-clock-and-welcome-scren/assets/living_room.png);
+    background-repeat: no-repeat;
+}
+
+.clock-container{ /* SAATIN EN DIS CERCEVESI */
+    position: absolute;
+    top: 200px;
+    left: 153px;
+    width: 200px;
+    height: 140px;
+    background-color: rgb(47, 47, 61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-container{ /* SAAT ICINDE GUNLER VE SAATIN GOSTERILDIGI CERCEVE */
+    width: 170px;
+    height: 90px;
+    background-color: rgb(30, 30, 36);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.days{ /* GUNLERIN YER ALDIGI CONTAINER */
+    width: 100%;
+    display: flex;
+}
+
+.day{ /* GUNLERIN YAZILDIGI P ETIKETININ CLASSI */
+    color: var(--text-faded);
+    font-size: 0.45rem;
+    padding: 10px 5px;
+    text-transform: uppercase;
+}
+
+.clock{ /* SAAT, ALARM SIMGESI VE AM-PM GOSTERIMININ YER ALDIGI CONTAINER */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+#clock-icon{ /* SAAT IKONU */
+    color: var(--text-faded);
+    padding-bottom: 18px;
+}
+
+#pm{ /* AM-PM TEXT ID'SI */
+    color: var(--text-faded-2);
+    font-size: 0.5rem;
+    padding-bottom: 20px;
+}
+
+.time{ /* SAAT-DAKIKA SAYILARININ YER ALDIGI CONTAINER */
+    display: flex;    
+    gap: 5px;
+}
+
+.time p{ /* SAAT-DAKIKA-SANIYE TEXTLERININ YAZILDIGI P TAGI */
+    color: var(--text-red);
+    font-family: var(--font-clock);
+    font-size: 2.3rem;
+    position: relative;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 10px #e32222;
+}
+
+.time p:not(:last-of-type)::after{ /* SAAT-DAKIKA-SANIYE ARASINA IKI NOKTA EKLENMESI */
+    content:':';
+    color: var(--text-red);
+    font-size:1rem;
+    margin-left: 10px;
+    position: absolute;
+    right: -7px;
+    top: 10px;
+}
+
+.text-container{ /* PC EKRANINDA EKRANI KAPLAYAN CONTAINER */
+    position: relative;
+    overflow: hidden;
+    width: 240px;
+    height: 126px;
+    top: 563px;
+    left: 415px;
+    border-radius: 3px;
+    background-color: #000;
+    transform: rotate(1deg);
+
+}
+
+.welcome-text{ /* EKRAN ICINDE YER ALAN H1 ETIKETI */
+    color: var(--text-red);
+    position: relative;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-size: 0.6em;
+    -webkit-animation-name: movetext, scaletext;
+    animation-name: movetext, scaletext;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes movetext{ /* TEXTI YUKARI ASAGI OYNATMA ANIMASYONU */
+    0% {top: 5px;}
+    50% {top: 110px;}
+    100% {top: 5px;}
+}
+
+@keyframes scaletext{ /* TEXTI SCALE ETME ANIMASYONU */
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
