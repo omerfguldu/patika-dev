@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Hoşgeldiniz !</title>
+</head>
+
+<body>
+    <div class="clock-container">
+        <!-- SAATIN EN DIS CONTAINER -->
+        <div class="screen-container">
+            <!-- SAAT-GUN KAPSAYAN CONTAINER-->
+            <div class="days">
+                <!-- GUNLERIN YER ALDIGI CONTAINER -->
+                <p id="mon" class="day">mon</p>
+                <p id="tue" class="day">tue</p>
+                <p id="wed" class="day">wed</p>
+                <p id="thu" class="day">thu</p>
+                <p id="fri" class="day">fri</p>
+                <p id="sat" class="day">sat</p>
+                <p id="sun" class="day">sun</p>
+            </div>
+            <div class="clock">
+                <!-- SAAT-ALARM VE AM-PM KAPSAYAN CONTAINER-->
+                <div class="clock-icon">
+                    <!-- SAAT IKONU CONTAINERI-->
+                    <p id="clock-icon"></p>
+                </div>
+                <div class="time">
+                    <!-- SAAT-DAKIKA-SANIYE CONTAINERI-->
+                    <p id="hour"></p>
+                    <p id="minute"></p>
+                    <p id="second"></p>
+                </div>
+                <div class="pm">
+                    <!-- AM-PM CONTAINERI-->
+                    <p id="pm"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-container">
+        <!-- PC EKRAN CONTAINERI-->
+        <h1 class="welcome-text">Welcome </h1>
+    </div>
+    <script src="js/digitalclock.js"></script>
+</body>
+
+</html>
