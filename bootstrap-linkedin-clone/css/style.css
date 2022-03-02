@@ -1,0 +1,209 @@
+.navbarbg {
+    height: 55px;
+    background-color: #fff !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  input.searche {
+    height: 36px;
+    min-width: 300px;
+    background-color: #eef3f8;
+    border: 0;
+  }
+  
+  input.searche::placeholder {
+    padding-left: 25px;
+    font-size: 14px;
+    color: gray;
+    background-image: url("/assets/search-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 7%;
+  }
+  
+  .body {
+    background-color: #f3f2ef;
+  }
+  
+  .menutext {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    margin-top: 5px;
+    font-weight: lighter;
+  }
+  
+  .menutext:hover {
+    color: black;
+  }
+  
+  button.mediatext {
+    color: #5f5f5f;
+  }
+  
+  button.mediatext:hover {
+    color: #5f5f5f;
+  }
+  
+  .mediatext {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5f5f5f;
+  }
+  
+  i {
+    color: gray;
+    margin-top: 8px;
+  }
+  i:hover {
+    color: black;
+  }
+  
+  input.content {
+    border-radius: 40px;
+    height: 45px;
+  }
+  input.content::placeholder {
+    font-weight: bolder;
+    font-size: 14px;
+    padding-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../assets/edit-regular.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  
+  div.card {
+    border-radius: 10px;
+  }
+  
+  .header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  
+  .view {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #5f5f5f;
+  }
+  
+  .categories {
+    font-size: 13px;
+    font-weight: bold;
+    color: #0a66c2;
+  }
+  
+  li {
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+  }
+  
+  .link {
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #5f5f5f;
+  }
+  
+  button.ref {
+    color: white;
+  }
+  
+  button.ref:hover {
+    color: #5f5f5f;
+  }
+  
+  .postphoto {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .posttext {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .card-header span:not(:first-of-type){
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 13px; color: #474747;
+  }
+
+  .posttext a{
+    color: #212529 !important;
+  }
+
+  .align-middle{
+    margin-left: -100px;
+  }
+
+  .align-bottom{
+    margin-left: -76px;
+  }
+
+  .card-text{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 15px; 
+    color: black;
+  }
+
+  .like-number{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size: 13px; 
+    color: #474747;
+  }
+
+  .fa-md{
+    font-size: 1.2rem;
+  }
+
+  .ml-3 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .ml3 .header{
+    font-size: 14px;
+  }
+
+  .sticky-top{
+    overflow: visible;
+    margin-top: 4rem;
+  }
+
+  .card-title ol li div{
+    font-weight: lighter;
+    font-size: 13px;
+    color: #5f5f5f;
+  }
+
+  .card-footer{
+    color: #0a66c2; font-size: 15px; margin-top: -25px
+  }
+
+  .fixed-bottom{
+    height: 50px; 
+    width: 300px;
+    position: -webkit-sticky; border-radius: 5px; 
+    margin-left: auto; 
+    right: 15px;
+  }
+
+  .fixed-bottom a img{
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+  }
+
+  .fixed-bottom span:first-of-type{
+    font-size: 14px; 
+    font-weight: bold; font-family:Arial, Helvetica, sans-serif;
+  }
