@@ -1,12 +1,10 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import List from "./components/List";
+import Components from "./components";
 
 function App() {
   return (
-    <div>
-      <List />
-      <Footer />
+    <div className="App">
+      <Components />
     </div>
   );
 }
