@@ -1,36 +1,19 @@
-import React from "react";
+import DetailedDataItem from "./DetailedDataItem";
+import { useWeather } from "../context/WeatherContext";
 
 function DetailedData() {
+  const { detailedDataValues } = useWeather();
+
   return (
     <div className="container-detailed">
-      <div className="container-detailed-info">
-        <img src="" alt="" />
-        <div className="detailed-info">
-          <p>Hissedilen Sicaklik</p>
-          <p className="detailed-text">32 C</p>
-        </div>
-      </div>
-      <div className="container-detailed-info">
-        <img src="" alt="" />
-        <div className="detailed-info">
-          <p>Hissedilen Sicaklik</p>
-          <p className="detailed-text">32 C</p>
-        </div>
-      </div>
-      <div className="container-detailed-info">
-        <img src="" alt="" />
-        <div className="detailed-info">
-          <p>Hissedilen Sicaklik</p>
-          <p className="detailed-text">32 C</p>
-        </div>
-      </div>
-      <div className="container-detailed-info">
-        <img src="" alt="" />
-        <div className="detailed-info">
-          <p>Hissedilen Sicaklik</p>
-          <p className="detailed-text">32 C</p>
-        </div>
-      </div>
+      {detailedDataValues.map((value, index) => (
+        <DetailedDataItem
+          key={index}
+          text={value.text}
+          imageSrc={value.imageSrc}
+          value={value.value}
+        />
+      ))}
     </div>
   );
 }

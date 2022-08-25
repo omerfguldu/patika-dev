@@ -8,7 +8,7 @@ function GeneralData() {
         className="weather-icon"
       ></img>
       <div className="condition-location">
-        <p className="weather-condition-text">Fog</p>
+        <p className="weather-condition-text">Açık</p>
         <p className="location-text">Istanbul</p>
       </div>
       <p className="weather-temp-text">32 °C</p>
