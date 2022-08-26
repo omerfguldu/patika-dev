@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { useWeather } from "../context/WeatherContext";
 import { cities } from "../shared/citiesOfTurkey";
-import axios from "axios";
 import { useEffect } from "react";
+import upperCaseFirstLetters from "../shared/upperCaseFirstLetters";
 
 function GeneralData() {
-  const { weatherInfo, filteredWeathers, setWeatherInfo, getWeatherData } =
+  const { weatherInfo, filteredWeathers, getWeatherData, day, setDay } =
     useWeather();
-  const [day, setDay] = useState(0);
   const [selectedCity, setSelectedCity] = useState("Adana");
 
   const handleChange = (e) => {
@@ -16,34 +15,42 @@ function GeneralData() {
         const long = city["longitude"];
         const lat = city["latitude"];
         setSelectedCity(e.target.value);
-        // console.log(long, lat);
         getWeatherData(lat, long);
       }
     });
+    setDay(0);
   };
   useEffect(() => {
     console.log(weatherInfo);
     console.log(filteredWeathers);
-    console.log(
-      filteredWeathers[day]["weather"][0]["description"].toUpperCase()
-    );
-  }, [weatherInfo, filteredWeathers]);
+    console.log(day);
+  }, [weatherInfo, filteredWeathers, day]);
 
   return (
     <div className="container-general">
       <img
-        src={"https://openweathermap.org/img/wn/04d@2x.png"}
+        src={`https://openweathermap.org/img/wn/${
+          filteredWeathers
+            ? filteredWeathers[day]["weather"][0]["icon"]
+            : "https://openweathermap.org/img/wn/04d"
+        }@2x.png`}
         className="weather-icon"
       ></img>
       <div className="condition-location">
         <p className="weather-condition-text">
           {filteredWeathers
-            ? filteredWeathers[day]["weather"][0]["description"]
-            : "Acik"}
+            ? upperCaseFirstLetters(
+                filteredWeathers[day]["weather"][0]["description"]
+              )
+            : "-"}
         </p>
         <p className="location-text">{selectedCity}</p>
       </div>
-      <p className="weather-temp-text">32 °C</p>
+      <p className="weather-temp-text">{`${
+        filteredWeathers
+          ? Math.round(filteredWeathers[day]["main"]["temp"])
+          : "-"
+      } °C`}</p>
       <div className="location-input">
         <span>
           <svg

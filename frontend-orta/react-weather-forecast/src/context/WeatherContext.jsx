@@ -14,6 +14,7 @@ export const WeatherProvider = ({ children }) => {
     ).then((res) => setWeatherInfo(res));
   };
 
+  const [day, setDay] = useState(0);
   const [weatherInfo, setWeatherInfo] = useState(null);
   if (!weatherInfo) getWeatherData();
   const [filteredWeathers, setFilteredWeathers] = useState(weatherInfo);
@@ -28,7 +29,6 @@ export const WeatherProvider = ({ children }) => {
     }
   }, [weatherInfo]);
 
-  // console.log(weatherInfo.data["list"][0]["dt_txt"].includes("12:00"));
   const detailedDataValues = [
     {
       text: "Hissedilen Sıcaklık",
@@ -95,6 +95,8 @@ export const WeatherProvider = ({ children }) => {
     setWeatherInfo,
     filteredWeathers,
     getWeatherData,
+    day,
+    setDay,
   };
 
   return (
