@@ -17,6 +17,7 @@ export const WeatherProvider = ({ children }) => {
   const [day, setDay] = useState(0);
   const [weatherInfo, setWeatherInfo] = useState(null);
   if (!weatherInfo) getWeatherData();
+
   const [filteredWeathers, setFilteredWeathers] = useState(weatherInfo);
 
   useEffect(() => {
@@ -33,22 +34,30 @@ export const WeatherProvider = ({ children }) => {
     {
       text: "Hissedilen Sıcaklık",
       imageSrc: sicaklikIcon,
-      value: "32 °C",
+      value: filteredWeathers
+        ? `${Math.round(filteredWeathers[day]["main"]["temp"])} °C`
+        : "-",
     },
     {
       text: "Nem Oranı",
       imageSrc: nemIcon,
-      value: "50 %",
+      value: filteredWeathers
+        ? `${Math.round(filteredWeathers[day]["main"]["humidity"])} %`
+        : "-",
     },
     {
       text: "Hava Basıncı",
       imageSrc: basincIcon,
-      value: "1010 PS",
+      value: filteredWeathers
+        ? `${Math.round(filteredWeathers[day]["main"]["pressure"])} PS`
+        : "-",
     },
     {
       text: "Rüzgar Hızı",
       imageSrc: ruzgarIcon,
-      value: "1.4 km/h",
+      value: filteredWeathers
+        ? `${Math.round(filteredWeathers[day]["wind"]["speed"])} km/h`
+        : "-",
     },
   ];
   const weatherData = [

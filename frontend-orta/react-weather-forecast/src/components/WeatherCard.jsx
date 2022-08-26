@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useWeather } from "../context/WeatherContext";
 
 function WeatherCard({
@@ -10,15 +11,21 @@ function WeatherCard({
   itemId,
 }) {
   const { setDay } = useWeather();
+  const allDivs = document.querySelectorAll(".weather-card");
 
-  const onCardClick = (day) => {
+  const onCardClick = (e, day) => {
     setDay(day);
+
+    allDivs.forEach((card) => {
+      card.classList.remove("active-weather");
+    });
+    e.target.closest("div").classList.add("active-weather");
   };
 
   return (
     <div
-      onClick={() => onCardClick(itemId)}
-      className="weather-card active-weather"
+      onClick={(e) => onCardClick(e, itemId)}
+      className={`weather-card ${itemId === 0 ? "active-weather" : ""}`}
     >
       <p className="day-text">{day}</p>
       <img

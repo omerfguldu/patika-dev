@@ -8,6 +8,7 @@ function GeneralData() {
   const { weatherInfo, filteredWeathers, getWeatherData, day, setDay } =
     useWeather();
   const [selectedCity, setSelectedCity] = useState("Adana");
+  const selectAllCards = document.querySelectorAll(".weather-card");
 
   const handleChange = (e) => {
     cities.forEach((city) => {
@@ -18,6 +19,11 @@ function GeneralData() {
         getWeatherData(lat, long);
       }
     });
+
+    selectAllCards.forEach((card) => {
+      card.classList.remove("active-weather");
+    });
+    selectAllCards[0].classList.add("active-weather");
     setDay(0);
   };
   useEffect(() => {

@@ -5,7 +5,7 @@ import upperCaseFirstLetters from "../shared/upperCaseFirstLetters";
 import formatDate from "../shared/formatDate";
 
 function WeatherCards() {
-  const { weatherData, filteredWeathers, setDay } = useWeather();
+  const { filteredWeathers } = useWeather();
 
   useEffect(() => {}, [filteredWeathers]);
 
