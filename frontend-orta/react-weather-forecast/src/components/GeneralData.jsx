@@ -1,6 +1,34 @@
-import React from "react";
+import { useState } from "react";
+import { useWeather } from "../context/WeatherContext";
+import { cities } from "../shared/citiesOfTurkey";
+import axios from "axios";
+import { useEffect } from "react";
 
 function GeneralData() {
+  const { weatherInfo, filteredWeathers, setWeatherInfo, getWeatherData } =
+    useWeather();
+  const [day, setDay] = useState(0);
+  const [selectedCity, setSelectedCity] = useState("Adana");
+
+  const handleChange = (e) => {
+    cities.forEach((city) => {
+      if (city["name"] === e.target.value) {
+        const long = city["longitude"];
+        const lat = city["latitude"];
+        setSelectedCity(e.target.value);
+        // console.log(long, lat);
+        getWeatherData(lat, long);
+      }
+    });
+  };
+  useEffect(() => {
+    console.log(weatherInfo);
+    console.log(filteredWeathers);
+    console.log(
+      filteredWeathers[day]["weather"][0]["description"].toUpperCase()
+    );
+  }, [weatherInfo, filteredWeathers]);
+
   return (
     <div className="container-general">
       <img
@@ -8,8 +36,12 @@ function GeneralData() {
         className="weather-icon"
       ></img>
       <div className="condition-location">
-        <p className="weather-condition-text">Açık</p>
-        <p className="location-text">Istanbul</p>
+        <p className="weather-condition-text">
+          {filteredWeathers
+            ? filteredWeathers[day]["weather"][0]["description"]
+            : "Acik"}
+        </p>
+        <p className="location-text">{selectedCity}</p>
       </div>
       <p className="weather-temp-text">32 °C</p>
       <div className="location-input">
@@ -27,9 +59,10 @@ function GeneralData() {
             />
           </svg>
         </span>
-        <select name="" id="">
-          <option value="lokasyon">Lokasyonu Değiştir</option>
-          <option value="istanbul">Istanbul</option>
+        <select onChange={handleChange} name="" id="">
+          {cities.map((city, index) => (
+            <option key={index}>{city.name}</option>
+          ))}
         </select>
       </div>
     </div>
