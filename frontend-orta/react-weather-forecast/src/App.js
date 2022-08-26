@@ -15,23 +15,23 @@ function App() {
   rgba(10, 9, 9, 0.82) 23.98%,
   rgba(113, 110, 110, 0.28) 97.92%),url(${imageLocal})`,
   });
-  // useEffect(() => {
-  //   axios(
-  //     "https://api.unsplash.com/photos/random?query=weather&client_id=6Ij9CduFEbH2IoIfKPa7YOzjXksvcWoCksfeCXD9nsc&orientation=landscape&count=1"
-  //   ).then((data) => {
-  //     setImage(data.data[0].urls["full"]);
-  //     console.log(`image ${image}`);
-  //     setBgImage({
-  //       backgroundImage: `linear-gradient(0deg,
-  // rgba(10, 9, 9, 0.82) 23.98%,
-  // rgba(113, 110, 110, 0.28) 97.92%),url(${image})`,
-  //     });
-  //     setLoading(false);
-  //   });
-  // }, [loading]);
-  // if (loading) {
-  //   return <div> Loading ...</div>;
-  // }
+  useEffect(() => {
+    axios(
+      "https://api.unsplash.com/photos/random?query=weather&client_id=6Ij9CduFEbH2IoIfKPa7YOzjXksvcWoCksfeCXD9nsc&orientation=landscape&count=1"
+    ).then((data) => {
+      setImage(data.data[0].urls["full"]);
+      console.log(`image ${image}`);
+      setBgImage({
+        backgroundImage: `linear-gradient(0deg,
+  rgba(10, 9, 9, 0.82) 23.98%,
+  rgba(113, 110, 110, 0.28) 97.92%),url(${image})`,
+      });
+      setLoading(false);
+    });
+  }, [loading]);
+  if (loading) {
+    return <div> Loading ...</div>;
+  }
   return (
     <WeatherProvider>
       <div className="bg-effect" style={bgImage}></div>
