@@ -60,45 +60,8 @@ export const WeatherProvider = ({ children }) => {
         : "-",
     },
   ];
-  const weatherData = [
-    {
-      day: "25 Ağustos",
-      weatherIcon: "https://openweathermap.org/img/wn/01d@2x.png",
-      weatherInfo: "Açık",
-      weatherTemp: "30 °C",
-      weatherFeelTemp: "Hissedilen Sıcaklık 30 °C",
-    },
-    {
-      day: "26 Ağustos",
-      weatherIcon: "https://openweathermap.org/img/wn/01d@2x.png",
-      weatherInfo: "Açık",
-      weatherTemp: "30 °C",
-      weatherFeelTemp: "Hissedilen Sıcaklık 30 °C",
-    },
-    {
-      day: "27 Ağustos",
-      weatherIcon: "https://openweathermap.org/img/wn/01d@2x.png",
-      weatherInfo: "Açık",
-      weatherTemp: "30 °C",
-      weatherFeelTemp: "Hissedilen Sıcaklık 30 °C",
-    },
-    {
-      day: "28 Ağustos",
-      weatherIcon: "https://openweathermap.org/img/wn/01d@2x.png",
-      weatherInfo: "Açık",
-      weatherTemp: "30 °C",
-      weatherFeelTemp: "Hissedilen Sıcaklık 30 °C",
-    },
-    {
-      day: "29 Ağustos",
-      weatherIcon: "https://openweathermap.org/img/wn/01d@2x.png",
-      weatherInfo: "Açık",
-      weatherTemp: "30 °C",
-      weatherFeelTemp: "Hissedilen Sıcaklık 30 °C",
-    },
-  ];
+
   const values = {
-    weatherData,
     detailedDataValues,
     weatherInfo,
     setWeatherInfo,

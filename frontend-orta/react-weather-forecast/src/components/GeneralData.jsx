@@ -26,19 +26,13 @@ function GeneralData() {
     selectAllCards[0].classList.add("active-weather");
     setDay(0);
   };
-  useEffect(() => {
-    console.log(weatherInfo);
-    console.log(filteredWeathers);
-    console.log(day);
-  }, [weatherInfo, filteredWeathers, day]);
+  useEffect(() => {}, [weatherInfo, filteredWeathers, day]);
 
   return (
     <div className="container-general">
       <img
         src={`https://openweathermap.org/img/wn/${
-          filteredWeathers
-            ? filteredWeathers[day]["weather"][0]["icon"]
-            : "https://openweathermap.org/img/wn/04d"
+          filteredWeathers ? filteredWeathers[day]["weather"][0]["icon"] : "04d"
         }@2x.png`}
         className="weather-icon"
       ></img>

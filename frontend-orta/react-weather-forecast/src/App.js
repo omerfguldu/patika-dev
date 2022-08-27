@@ -20,7 +20,6 @@ function App() {
       "https://api.unsplash.com/photos/random?query=weather&client_id=6Ij9CduFEbH2IoIfKPa7YOzjXksvcWoCksfeCXD9nsc&orientation=landscape&count=1"
     ).then((data) => {
       setImage(data.data[0].urls["full"]);
-      console.log(`image ${image}`);
       setBgImage({
         backgroundImage: `linear-gradient(0deg,
   rgba(10, 9, 9, 0.82) 23.98%,

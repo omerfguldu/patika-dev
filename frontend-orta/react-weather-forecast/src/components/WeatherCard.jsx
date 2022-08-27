@@ -29,7 +29,9 @@ function WeatherCard({
     >
       <p className="day-text">{day}</p>
       <img
-        src={`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
+        src={`https://openweathermap.org/img/wn/${
+          weatherIcon === undefined ? "04d" : weatherIcon
+        }@2x.png`}
         alt=""
       />
       <p className="weather-info-text">{weatherInfo}</p>
