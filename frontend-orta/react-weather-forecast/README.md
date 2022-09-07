@@ -10,7 +10,7 @@ Live: [https://5gunlukhavadurumu.netlify.app](https://5gunlukhavadurumu.netlify.
 
 ---
 
-Projeyi kendi bilgisayarınıza klonlamak için terminale aşağıdaki kodu yazabilirsiniz. Klonlanan proje dosyası içerisinde yer alan javascript-todo-list klasörünün içerisinden proje kodlarına ulaşabilirsiniz.
+Projeyi kendi bilgisayarınıza klonlamak için terminale aşağıdaki kodu yazabilirsiniz. Klonlanan proje dosyası içerisinde yer alan react-weather-forecast klasörünün içerisinden proje kodlarına ulaşabilirsiniz.
 [https://github.com/omerfguldu/patika-dev.git](https://github.com/omerfguldu/patika-dev.git)
 
 ```
